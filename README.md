@@ -1,1 +1,2 @@
-# flutterreleases.dev
+# flutter_releases
+

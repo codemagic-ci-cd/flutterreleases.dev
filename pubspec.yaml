@@ -1,0 +1,30 @@
+name: flutter_releases
+description: Flutter Releases
+publish_to: 'none'
+version: 0.0.0+1
+
+environment:
+  sdk: '>=2.18.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  equatable: any
+  cupertino_icons: ^1.0.5
+  freezed_annotation: ^2.2.0
+  json_annotation: ^4.8.0
+  http: ^0.13.5
+  intl: any
+  url_launcher: ^6.1.9
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  json_serializable: any
+  flutter_lints: ^2.0.1
+  build_runner: any
+  freezed: ^2.3.2
+
+flutter:
+  uses-material-design: true
