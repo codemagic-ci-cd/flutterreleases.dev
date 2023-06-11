@@ -1,30 +1,38 @@
 name: flutter_releases
 description: Flutter Releases
-publish_to: 'none'
-version: 0.0.0+1
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+version: 1.0.0+1
 
 environment:
-  sdk: '>=2.18.0 <4.0.0'
+  sdk: '>=3.0.0 <4.0.0'
 
 dependencies:
   flutter:
     sdk: flutter
-
-  equatable: any
   cupertino_icons: ^1.0.5
+  equatable: ^2.0.5
   freezed_annotation: ^2.2.0
-  json_annotation: ^4.8.0
-  http: ^0.13.5
+  json_annotation: ^4.8.1
+  http: ^1.0.0
   intl: any
-  url_launcher: ^6.1.9
+  url_launcher: ^6.1.11
+  flex_color_scheme: ^7.1.2
+  font_awesome_flutter: ^10.4.0
+  tab_navigation_bar:
+    git:
+      url: https://github.com/TahaTesser/tab_navigation_bar
+  google_fonts: ^5.0.0
+  drift: ^2.8.2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  json_serializable: any
   flutter_lints: ^2.0.1
+  json_serializable: ^6.7.0
   build_runner: any
-  freezed: ^2.3.2
+  freezed: ^2.3.5
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/
