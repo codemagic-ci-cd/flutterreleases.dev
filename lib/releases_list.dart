@@ -23,6 +23,7 @@ class ReleasesList extends StatefulWidget {
 class _ReleasesListState extends State<ReleasesList> {
   final ScrollController _scrollController = ScrollController();
   int _currentCount = 10;
+  bool _isloading = false;
 
   @override
   void initState() {
@@ -40,7 +41,14 @@ class _ReleasesListState extends State<ReleasesList> {
     if (_scrollController.position.pixels ==
         _scrollController.position.maxScrollExtent) {
       setState(() {
-        _currentCount += 5;
+        _isloading = true;
+      });
+
+      Future.delayed(const Duration(seconds: 1)).then((_) {
+        setState(() {
+          _currentCount += 10;
+          _isloading = false;
+        });
       });
     }
   }
@@ -55,7 +63,7 @@ class _ReleasesListState extends State<ReleasesList> {
     return ListView.builder(
       controller: _scrollController,
       padding: const EdgeInsets.all(8.0),
-      itemCount: _currentCount,
+      itemCount: _currentCount + (_isloading ? 1 : 0),
       itemBuilder: (context, index) {
         final Release release = widget.releases[index];
 
@@ -77,6 +85,12 @@ class _ReleasesListState extends State<ReleasesList> {
             break;
           default:
             labelText = null;
+        }
+
+        if (index == _currentCount) {
+          return const Center(
+            child: CircularProgressIndicator(),
+          );
         }
 
         return Stack(
