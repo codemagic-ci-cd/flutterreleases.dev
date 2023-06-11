@@ -1,13 +1,14 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'infra_releases.dart';
+part of 'flutter_infra_releases.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_InfraReleases _$$_InfraReleasesFromJson(Map<String, dynamic> json) =>
-    _$_InfraReleases(
+_$_FlutterInfraReleases _$$_FlutterInfraReleasesFromJson(
+        Map<String, dynamic> json) =>
+    _$_FlutterInfraReleases(
       baseUrl: json['base_url'] as String?,
       currentRelease: json['current_release'] == null
           ? null
@@ -18,7 +19,8 @@ _$_InfraReleases _$$_InfraReleasesFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_InfraReleasesToJson(_$_InfraReleases instance) =>
+Map<String, dynamic> _$$_FlutterInfraReleasesToJson(
+        _$_FlutterInfraReleases instance) =>
     <String, dynamic>{
       'base_url': instance.baseUrl,
       'current_release': instance.currentRelease,
